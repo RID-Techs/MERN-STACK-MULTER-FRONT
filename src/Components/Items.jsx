@@ -3,11 +3,7 @@ import { Link, useLoaderData, useNavigate, } from "react-router-dom"
 export function Items () {
     const data = useLoaderData()
     const  navigate = useNavigate()
-     // Include token in request headers
-    // const storedToken = localStorage.getItem('token');
-    // console.log('Token from local storage:', storedToken);
     
-
     const logOut = () => {
         localStorage.removeItem('token')
         navigate("/")

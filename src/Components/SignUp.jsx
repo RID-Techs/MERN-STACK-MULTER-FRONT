@@ -4,7 +4,6 @@ import { toast, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export function SignUp () {
-    // const [canSubmit, setCanSubmit] = useState(null)
         const navigate = useNavigate();
 
         const fieldsRequired = () => toast.warn("Please, All fields are required", {
@@ -35,7 +34,7 @@ export function SignUp () {
             } else{ 
                 const Register = async () => {
                     try {
-                        const url = "http://localhost:9001/auth/signup"
+                        const url = "https://mern-stack-multer-back.onrender.com/auth/signup"
                         const signingUp = await fetch(url, {
                             method: "POST",
                             headers: {"Content-Type": "application/json"},

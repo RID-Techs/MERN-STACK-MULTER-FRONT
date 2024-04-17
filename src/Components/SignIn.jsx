@@ -4,7 +4,6 @@ import { toast, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch } from 'react-redux';
 import { setToken } from "../Redux-Store/TokenSlice";
-import GoogleButton from 'react-google-button'
 
 export function SignIn () {
 
@@ -38,7 +37,7 @@ export function SignIn () {
             } else{ 
                 const Register = async () => {
                     try {
-                        const url = "http://localhost:9001/auth/login"
+                        const url = "https://mern-stack-multer-back.onrender.com/auth/login"
                         const signingIn = await fetch(url, {
                             method: "POST",
                             headers: {"Content-Type": "application/json"},
@@ -76,18 +75,6 @@ export function SignIn () {
                 Register()
             }
         }
-
-        function navigate(url) {
-            window.location.href = url
-        }
-
-        async function auth(){
-            const response = await fetch('http://localhost:9001/auth/authlogin', {
-                method: 'POST'});
-                const data = await response.json()
-                navigate(data.url)
-                console.log(data.url)
-        }
     
     return <Fragment>
         <div style={{backgroundColor: "beige", minHeight: "100vh"}}>
@@ -104,11 +91,6 @@ export function SignIn () {
     </div>
 
         <h1 className="login-page"><em>Welcome to the Login page !</em></h1>
-        
-        <hr />
-        <GoogleButton 
-            onClick={() => auth()}
-            />
 
         <hr />
         <div className="Input-Wraper">

@@ -82,7 +82,7 @@ function App() {
             "Authorization": `Bearer ${storedToken || token}`,
           }
 
-          const url = "http://localhost:9001/items";
+          const url = "https://mern-stack-multer-back.onrender.com/items";
           const getItems = await fetch(url, {
             method: "GET",
             headers: headers,
@@ -138,7 +138,7 @@ function App() {
           const headers = {
             "Authorization": `Bearer ${storedToken || token}`,
           } 
-          const url = `http://localhost:9001/items/${id}`;
+          const url = `https://mern-stack-multer-back.onrender.com/items/${id}`;
           const item = await fetch(url, {
             method: "GET",
             headers: headers

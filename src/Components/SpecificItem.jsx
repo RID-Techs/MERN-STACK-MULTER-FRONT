@@ -65,7 +65,7 @@ export function SpecificItem () {
                     "Authorization": `Bearer ${storedToken || token}`
                 };
 
-                const url = `http://localhost:9001/items/delete/${Item._id}`
+                const url = `https://mern-stack-multer-back.onrender.com/items/delete/${Item._id}`
                 const ItemToDelete = await fetch(url, {
                         method: "DELETE",
                         headers: headers    
@@ -142,7 +142,7 @@ export function SpecificItem () {
                     navigate("/");
                 }
 
-                const url = `http://localhost:9001/items/modify/${Item._id}`
+                const url = `https://mern-stack-multer-back.onrender.com/items/modify/${Item._id}`
                     const sendItem = await fetch(url, {
                         method: "PUT",
                         headers: headers,

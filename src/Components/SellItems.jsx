@@ -78,7 +78,7 @@ export function SellItem () {
                     navigate("/");
                 }
 
-                const url = "http://localhost:9001/items/sell"
+                const url = "https://mern-stack-multer-back.onrender.com/items/sell"
                     const sendItem = await fetch(url, {
                         method: "POST",
                         headers: headers,
