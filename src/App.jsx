@@ -50,7 +50,7 @@ function App() {
       errorElement: <ErrorPage />,
     },
     {
-      path: "https://view-my-profile.onrender.com/signup",
+      path: "/signup",
       element: (
         <ErrorBoundary fallback={<Error />}>
           <SignUp />
