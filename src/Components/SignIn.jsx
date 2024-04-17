@@ -1,5 +1,5 @@
 import { Fragment } from "react"
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { toast, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch } from 'react-redux';
@@ -8,7 +8,6 @@ import { setToken } from "../Redux-Store/TokenSlice";
 export function SignIn () {
 
         const dispatch = useDispatch()
-        const navigate = useNavigate()
         const fieldsRequired = () => toast.warn("Please, All fields are required", {
             theme: "light",
             autoClose: 2000,
@@ -54,8 +53,7 @@ export function SignIn () {
                             localStorage.setItem('token', token)
                             dispatch(setToken(token))
                             Welcome()
-                            navigate("/items")
-                            // window.location.replace("/items")
+                            window.location.replace("/items")
                         } else{
                             const noPseudo = res.mesPseudo
                             const noEmail = res.mesEmail
