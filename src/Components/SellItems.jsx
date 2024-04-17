@@ -31,7 +31,7 @@ export function SellItem () {
         autoClose: 2000,
         transition: Zoom,
     });
-    const successItem = () => toast.success("Item add successfully !", {
+    const successItem = () => toast.success("Item added successfully !", {
         theme: "light",
         autoClose: 2000,
         transition: Zoom,
